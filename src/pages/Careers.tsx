@@ -230,7 +230,7 @@ const Careers = () => {
             </h1>
             <p className="text-white/70 text-lg max-w-xl mb-8">
               Be part of a mission-driven team dedicated to transforming global
-              health. At Helik, your work directly impacts millions of lives.
+              health. At Gamete, your work directly impacts millions of lives.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white/80 text-sm">
@@ -251,7 +251,7 @@ const Careers = () => {
           <FadeUp>
             <div className="text-center mb-14">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#0a8987] bg-[#b5fbfa] px-4 py-1.5 rounded-full mb-3">
-                Why Helik
+                Why Gamete
               </span>
               <h2 className="text-4xl font-bold text-[#1253A1] mb-4">
                 Why Work With Us
@@ -488,7 +488,7 @@ const Careers = () => {
                   onChange={(e) =>
                     setForm({ ...form, message: e.target.value })
                   }
-                  placeholder="Tell us about yourself and why you want to join Helik Healthcare..."
+                  placeholder="Tell us about yourself and why you want to join Gamete Healthcare..."
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1253A1] transition-colors resize-none"
                 />
               </div>

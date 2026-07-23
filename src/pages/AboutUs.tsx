@@ -205,17 +205,22 @@ const AboutUs = () => {
               Our Story
             </h1>
             <p className="text-white/70 text-lg">
-              Established in 2020, Helik Healthcare Pvt. Ltd. has solidified its
-              standing as an authoritative, high-integrity contract
-              manufacturing and marketing partner operating within India. While
-              acting with the rapid flexibility of a modern enterprise, Helik's
-              operational foundation is built on more than three decades of
-              industrial experience through its associate organization, Gamete
-              Healthcare Pvt. Ltd. As a fully integrated entity, Helik
-              Healthcare manages international market architecture, structural
-              brand registration, and large-scale logistical supply networks,
-              focusing on advanced nutraceutical products and premium herbal
-              supplement systems across global markets.
+              Founded in 1998, Gamete Healthcare is a trusted pharmaceutical
+              company committed to delivering high-quality healthcare solutions
+              across India. With nearly three decades of experience, we have
+              built a strong reputation for providing reliable, effective, and
+              affordable pharmaceutical products while upholding the highest
+              standards of quality, integrity, and ethical business practices.
+            </p>
+            <p className="text-white/70 text-lg">
+              Over the years, we have established a strong distribution network
+              across East & Central Uttar Pradesh, followed by Gujarat,
+              Rajasthan, and West Madhya Pradesh, ensuring the timely
+              availability of quality pharmaceutical products and dependable
+              service to healthcare professionals, distributors, and business
+              partners. Driven by innovation and customer satisfaction, Gamete
+              Healthcare continues to strengthen its position as a reliable name
+              in the pharmaceutical industry.
             </p>
           </motion.div>
         </div>
@@ -251,13 +256,25 @@ const AboutUs = () => {
                     Our Mission
                   </h3>
                   <p className="text-white/80 leading-relaxed text-base">
-                    To make high-quality healthcare accessible by delivering
-                    safe, effective, and affordable pharmaceutical products
-                    across the globe. Through WHO-GMP and ISO-certified contract
-                    manufacturing partners, we are committed to maintaining
-                    world-class quality standards while building lasting trust
-                    with healthcare professionals, distributors, and consumers
-                    in every market we serve.
+                    <div>
+                      • Deliver safe, effective, and high-quality healthcare
+                      products.
+                    </div>
+                    <div>
+                      {" "}
+                      • Uphold the highest standards of quality and ethics.{" "}
+                    </div>{" "}
+                    <div>
+                      {" "}
+                      • Build lasting partnerships through trust and customer
+                      satisfaction.
+                    </div>
+                    <div>
+                      {" "}
+                      • Drive continuous innovation to meet evolving healthcare
+                      needs.
+                    </div>{" "}
+                    <div>• Expand our global presence with excellence.</div>
                   </p>
                   <div className="mt-8 pt-6 border-t border-white/20">
                     <p className="text-white/60 text-sm italic">
@@ -281,10 +298,9 @@ const AboutUs = () => {
                     Our Vision
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-base">
-                    To become a leading global pharmaceutical company by setting
-                    new benchmarks in quality, reliability, and customer
-                    satisfaction through internationally certified manufacturing
-                    and ethical business practices.
+                    To become a globally trusted healthcare company by
+                    delivering quality, innovation, and excellence in
+                    pharmaceutical and nutraceutical solutions.
                   </p>
                   <div className="mt-8 pt-6 border-t border-gray-100">
                     <div className="flex gap-6">

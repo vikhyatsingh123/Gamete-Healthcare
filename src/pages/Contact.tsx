@@ -56,7 +56,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "helikhealthcare@gmail.com",
+    value: "gametehealthcare@gmail.com",
     color: "#2ecc71",
   },
   {
@@ -74,7 +74,7 @@ const offices = [
       "C-502, Hotech Commercial, C-Block, Defence Enclave, Noida Sector-44, Uttar Pradesh 201301, India",
     phone1: "+91 9415812557",
     phone2: "+91 9793142303",
-    email: "helikhealthcare@gmail.com",
+    email: "gametehealthcare@gmail.com",
     type: "North India Headquarters",
     color: "#1253A1",
   },
@@ -83,7 +83,7 @@ const offices = [
     address: "Owaisi Building, 302, Golden Sands, Mankhool, Dubai, UAE",
     phone1: "+91 9415812557",
     phone2: "+91 9793142303",
-    email: "helikhealthcare@gmail.com",
+    email: "gametehealthcare@gmail.com",
     type: "International Headquarters",
     color: "#0a8987",
   },

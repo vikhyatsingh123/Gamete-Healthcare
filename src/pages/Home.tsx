@@ -10,18 +10,20 @@ import {
   Lightbulb,
   Globe,
   ArrowRight,
-  TestTube2,
-  Package,
-  Hand,
-  Syringe,
-  Eye,
-  Baby,
-  FlaskConical,
-  Bone,
   ShieldPlus,
+  ShieldCheck,
+  Microscope,
   Activity,
   Soup,
-  ZapIcon,
+  Bone,
+  Eye,
+  Pill,
+  Droplets,
+  Wind,
+  MapPin,
+  Award,
+  Compass,
+  Target,
 } from "lucide-react";
 import HeroSlider from "../components/HeroSlider";
 import StatsCounter from "../components/StatsCounter";
@@ -52,146 +54,131 @@ const FadeUp = ({
   );
 };
 
+// 14 therapeutic segments straight from the Gamete Healthcare portfolio page.
 const productCategories = [
   {
-    icon: Leaf,
-    title: "Nutraceuticals & Herbal Supplements",
-    desc: "Evidence-based nutritional and herbal supplements supporting overall health and wellness.",
-    count: 90,
-    color: "#f59e0b",
+    icon: ShieldCheck,
+    title: "Antiallergics & Immune System",
+    desc: "Formulations that manage allergic conditions and support healthy immune function.",
+    color: "#0ea5e9",
   },
   {
-    icon: Heart,
-    title: "Cardiovascular System",
-    desc: "Medicines for hypertension, heart failure, cholesterol management, and other cardiovascular conditions.",
-    count: 85,
-    color: "#0a8987",
+    icon: ShieldPlus,
+    title: "Antibiotics & Anti-Infectives",
+    desc: "Broad-spectrum antibiotics and anti-infectives for bacterial and other infections.",
+    color: "#2ecc71",
   },
   {
-    icon: Brain,
-    title: "Central Nervous System",
-    desc: "Therapies for neurological and psychiatric disorders including epilepsy, anxiety, and depression.",
-    count: 62,
+    icon: Microscope,
+    title: "Anti-Cancer",
+    desc: "Oncology formulations developed under strict quality and safety protocols.",
     color: "#8b5cf6",
   },
   {
     icon: Activity,
-    title: "Anti-diabetic",
+    title: "Anti-Diabetic",
     desc: "Tablets and capsules for effective blood glucose control and diabetes management.",
-    count: 47,
     color: "#1253A1",
   },
   {
-    icon: ShieldPlus,
-    title: "Antibiotic & Anti-Infective",
-    desc: "Broad-spectrum antibiotics and anti-infective medicines for bacterial and other infections.",
-    count: 55,
-    color: "#2ecc71",
-  },
-  {
-    icon: Soup,
-    title: "Alimentary System",
-    desc: "Medicines for digestive health, acidity, ulcers, constipation, and gastrointestinal disorders.",
-    count: 40,
-    color: "#f97316",
-  },
-  {
-    icon: Bone,
-    title: "Analgesics & Musculo Skeletal Disorders",
-    desc: "Pain management and anti-inflammatory medicines for muscles, joints, and bones.",
-    count: 50,
+    icon: Heart,
+    title: "Cardiovascular & Hematopoietic System",
+    desc: "Medicines for hypertension, heart health, cholesterol and blood-related conditions.",
     color: "#ef4444",
   },
   {
-    icon: ZapIcon,
-    title: "RI Tract & Anti-Allergic",
-    desc: "Treatments for respiratory infections, allergies, asthma, and cough-related conditions.",
-    count: 36,
-    color: "#0ea5e9",
+    icon: Brain,
+    title: "Central Nervous System",
+    desc: "Therapies for neurological and psychiatric conditions.",
+    color: "#8b5cf6",
   },
   {
     icon: Sparkles,
-    title: "Vitamins & Minerals",
-    desc: "Essential vitamin and mineral supplements for nutritional support and deficiency management.",
-    count: 44,
-    color: "#eab308",
-  },
-  {
-    icon: FlaskConical,
-    title: "Other Formulations",
-    desc: "A range of specialized pharmaceutical formulations for diverse therapeutic needs.",
-    count: 28,
-    color: "#64748b",
-  },
-  {
-    icon: Baby,
-    title: "Oral Dry Suspensions & Oral Liquids",
-    desc: "Liquid formulations and suspensions designed for pediatric and adult patients.",
-    count: 31,
-    color: "#14b8a6",
-  },
-  {
-    icon: Syringe,
-    title: "General Injections",
-    desc: "Injectable medicines for hospital, emergency, and clinical care applications.",
-    count: 24,
-    color: "#7c3aed",
+    title: "Dermatologicals",
+    desc: "Topical formulations for a wide range of skin conditions.",
+    color: "#22c55e",
   },
   {
     icon: Eye,
-    title: "Eye, Ear & Nasal Drops",
-    desc: "Sterile ophthalmic, otic, and nasal preparations for localized treatment.",
-    count: 20,
+    title: "Eye, Ear & Nasal Preparations",
+    desc: "Sterile ophthalmic, otic and nasal preparations for localized treatment.",
     color: "#06b6d4",
   },
   {
-    icon: Hand,
-    title: "External Preparations",
-    desc: "Topical solutions for skin care, wound management, and localized pain relief.",
-    count: 29,
-    color: "#84cc16",
+    icon: Soup,
+    title: "Gastrointestinal System",
+    desc: "Medicines for digestive health, acidity, ulcers and related disorders.",
+    color: "#f97316",
   },
   {
-    icon: Package,
-    title: "Oral Powders (Sachet)",
-    desc: "Convenient sachet formulations for nutritional support and therapeutic treatment.",
-    count: 18,
+    icon: Droplets,
+    title: "Genito-Urinary System",
+    desc: "Treatments addressing genito-urinary health and related conditions.",
+    color: "#14b8a6",
+  },
+  {
+    icon: Bone,
+    title: "Musculo-Skeletal System",
+    desc: "Pain management and anti-inflammatory medicines for muscles, joints and bones.",
     color: "#f43f5e",
   },
   {
-    icon: TestTube2,
-    title: "Products Under Development",
-    desc: "Innovative pharmaceutical formulations currently under research and development.",
-    count: 15,
-    color: "#6366f1",
+    icon: Wind,
+    title: "Respiratory System",
+    desc: "Treatments for respiratory infections, asthma and cough-related conditions.",
+    color: "#0284c7",
   },
   {
-    icon: Sparkles,
-    title: "Ointments, Creams, Gels, Lotions & Shampoo",
-    desc: "Topical dermatological and personal care formulations for various skin and scalp conditions.",
-    count: 35,
-    color: "#22c55e",
+    icon: Pill,
+    title: "Vitamins & Minerals",
+    desc: "Essential vitamin and mineral supplements for nutritional support.",
+    color: "#eab308",
+  },
+  {
+    icon: Leaf,
+    title: "Nutraceuticals",
+    desc: "Evidence-based nutritional and herbal supplements supporting overall wellness.",
+    color: "#f59e0b",
   },
 ];
 
+// Six reasons pulled directly from the brochure's "Why Choose Gamete Healthcare" page.
 const whyUsItems = [
   {
-    icon: CheckCircle,
-    title: "Wide Product Range & Accessibility",
-    desc: "We offer a wide range of medicines and healthcare products to meet your medical needs. From prescription medications to over-the-counter remedies, we provide quality products from trusted brands, ensuring reliable care and convenience for every customer.",
+    icon: Award,
+    title: "Established Since 1998",
+    desc: "Trusted pharmaceutical expertise built over nearly three decades.",
     color: "#1253A1",
   },
   {
-    icon: Lightbulb,
-    title: "Quality & Compliance",
-    desc: "We adhere to stringent quality systems, regulatory requirements, and international manufacturing standards to ensure safe, effective, and reliable healthcare products for global markets. Quality is embedded at every stage—from sourcing to final delivery.",
+    icon: CheckCircle,
+    title: "Quality Assured",
+    desc: "Products manufactured at WHO-GMP, ISO & GMP-certified facilities.",
     color: "#0a8987",
   },
   {
-    icon: Globe,
-    title: "Global Partnerships & Reliability",
-    desc: "We build long-term relationships through transparent communication, timely delivery, scalable manufacturing, and customized solutions that help partners grow confidently in international markets.",
+    icon: Leaf,
+    title: "Comprehensive Product Portfolio",
+    desc: "A wide range of pharmaceutical and nutraceutical products.",
     color: "#2ecc71",
+  },
+  {
+    icon: MapPin,
+    title: "Strong Market Presence",
+    desc: "A well-established distribution network across key Indian markets.",
+    color: "#f59e0b",
+  },
+  {
+    icon: Globe,
+    title: "Global Reach",
+    desc: "Helik Healthcare, our dedicated export division, serves international markets.",
+    color: "#0ea5e9",
+  },
+  {
+    icon: Lightbulb,
+    title: "Trusted Partnership",
+    desc: "Committed to quality, integrity, innovation and customer satisfaction.",
+    color: "#8b5cf6",
   },
 ];
 
@@ -219,14 +206,14 @@ const testimonials = [
     color: "#0a8987",
   },
   {
-    name: "Mr. Suprem Kumar Shrestha",
+    name: "Mr. Ahmed Al Mansoori",
     role: "Director",
-    organization: "Jakarta Traders & Suppliers Pvt. Ltd.",
+    organization: "Al Noor Trading LLC",
     quote:
-      "Helik Healthcare has consistently delivered high-quality pharmaceutical products with dependable service, making them a trusted and reliable business partner.",
+      "Helik Healthcare has consistently delivered high-quality pharmaceutical products with dependable service, making them a trusted business partner in the UAE.",
     rating: 5,
-    country: "Jakarta, Indonesia",
-    initial: "SK",
+    country: "Dubai, UAE",
+    initial: "AM",
     color: "#8b5cf6",
   },
   {
@@ -251,7 +238,6 @@ const testimonials = [
     country: "Kathmandu, Nepal",
     color: "#8b5cf6",
   },
-
   {
     name: "Dr. Vijay",
     role: "Doctor",
@@ -276,93 +262,72 @@ const testimonials = [
   },
 ];
 
-const therapeuticAreaCards = [
+// Global presence exactly as shown on the brochure's map page.
+const globalPresence = [
   {
-    icon: Leaf,
-    title: "Nutraceuticals & Herbal Supplements",
-    color: "#f59e0b",
+    country: "Nepal",
+    flag: "🇳🇵",
+    note: "Long-standing distributor network across Kathmandu and Eastern Nepal.",
   },
   {
-    icon: Heart,
-    title: "Cardiovascular System",
-    color: "#ef4444",
+    country: "Bhutan",
+    flag: "🇧🇹",
+    note: "Trusted supply partnerships serving Thimphu and beyond.",
   },
   {
-    icon: Brain,
-    title: "Central Nervous System",
-    color: "#8b5cf6",
-  },
-  {
-    icon: Activity,
-    title: "Anti-diabetic",
-    color: "#1253A1",
-  },
-  {
-    icon: ShieldPlus,
-    title: "Antibiotic & Anti-Infective",
-    color: "#22c55e",
-  },
-  {
-    icon: Soup,
-    title: "Alimentary System",
-    color: "#f97316",
-  },
-  {
-    icon: Bone,
-    title: "Analgesics & Musculo Skeletal Disorders",
-    color: "#0ea5e9",
-  },
-  {
-    icon: Heart,
-    title: "RI Tract & Anti-Allergic",
-    color: "#06b6d4",
-  },
-  {
-    icon: Sparkles,
-    title: "Vitamins & Minerals",
-    color: "#eab308",
-  },
-  {
-    icon: FlaskConical,
-    title: "Other Formulations",
-    color: "#64748b",
-  },
-  {
-    icon: Baby,
-    title: "Oral Dry Suspensions & Oral Liquids",
-    color: "#14b8a6",
-  },
-  {
-    icon: Syringe,
-    title: "General Injections",
-    color: "#dc2626",
-  },
-  {
-    icon: Eye,
-    title: "Eye, Ear & Nasal Drops",
-    color: "#0284c7",
-  },
-  {
-    icon: Hand,
-    title: "External Preparations",
-    color: "#84cc16",
-  },
-  {
-    icon: Package,
-    title: "Oral Powders (Sachet)",
-    color: "#f43f5e",
-  },
-  {
-    icon: TestTube2,
-    title: "Products Under Development",
-    color: "#6366f1",
-  },
-  {
-    icon: Sparkles,
-    title: "Ointments, Creams, Gels, Lotions & Shampoo",
-    color: "#10b981",
+    country: "Dubai, UAE",
+    flag: "🇦🇪",
+    note: "Regional office coordinating our growing Gulf presence.",
   },
 ];
+
+// Hexagon molecule cluster — replaces the old spinning-ring visual with
+// something drawn from the brochure's own hexagon/molecule artwork.
+const hexPoints = "50 0, 100 25, 100 75, 50 100, 0 75, 0 25";
+const moleculeNodes = [
+  { x: 44, y: 8, size: 68, delay: 0 },
+  { x: 6, y: 38, size: 56, delay: 0.15 },
+  { x: 58, y: 42, size: 84, delay: 0.05 },
+  { x: 18, y: 74, size: 60, delay: 0.25 },
+  { x: 62, y: 78, size: 50, delay: 0.35 },
+];
+
+const MoleculeGraphic = () => (
+  <div className="relative w-full h-full">
+    {moleculeNodes.map((n, i) => (
+      <motion.div
+        key={i}
+        className="absolute"
+        style={{
+          left: `${n.x}%`,
+          top: `${n.y}%`,
+          width: n.size,
+          height: n.size,
+        }}
+        initial={{ opacity: 0, scale: 0.4 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: n.delay, ease: "easeOut" }}
+      >
+        <motion.div
+          className="w-full h-full"
+          style={{
+            clipPath: `polygon(${hexPoints})`,
+            background:
+              i === 2 ? "rgba(255,255,255,0.16)" : "rgba(255,255,255,0.08)",
+            border: "1px solid rgba(255,255,255,0.25)",
+          }}
+          animate={{ y: [0, -6, 0] }}
+          transition={{
+            duration: 4 + i,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: n.delay,
+          }}
+        />
+      </motion.div>
+    ))}
+  </div>
+);
 
 const Home = () => {
   return (
@@ -381,44 +346,42 @@ const Home = () => {
             <div>
               <FadeUp>
                 <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#0a8987] bg-[#b5fbfa] px-4 py-1.5 rounded-full mb-4">
-                  About Helik Healthcare
+                  About Gamete Healthcare
                 </span>
                 <h2 className="text-4xl font-bold text-[#1253A1] leading-tight mb-5">
-                  A Legacy of Trust, A Future of Innovation
+                  Building Trust in Healthcare Since 1998
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Established in 2020, Helik Healthcare Pvt. Ltd. has solidified
-                  its standing as an authoritative, high-integrity contract
-                  manufacturing and marketing partner operating within India.
+                  Founded in 1998 and headquartered in Noida, Uttar Pradesh,
+                  Gamete Healthcare Pvt. Ltd. is a trusted pharmaceutical
+                  company committed to delivering high-quality healthcare
+                  solutions across India.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  While acting with the rapid flexibility of a modern
-                  enterprise, Helik's operational foundation is built on more
-                  than three decades of industrial experience through its core
-                  northern associate corporation, Gamete Healthcare Pvt. Ltd.,
-                  based in Delhi (North India).
+                  Over the years we have built a strong distribution network
+                  across East & Central Uttar Pradesh, Gujarat, Rajasthan and
+                  West Madhya Pradesh. In 2020 we launched Helik Healthcare, a
+                  dedicated export division that now carries the same standard
+                  of care to healthcare partners in Nepal, Bhutan and the UAE —
+                  with manufacturing capability serving 20+ countries.
                 </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  As a fully integrated entity, Helik Healthcare masterfully
-                  manages international market architecture, structural brand
-                  registration, and large-scale logistical supply networks. We
-                  focus entirely on driving maximum therapeutic efficacy and
-                  distribution security for advanced nutraceutical product
-                  suites and premium-grade herbal supplement systems across
-                  demanding global territories.
+                <p className="text-gray-600 leading-relaxed mb-8 italic">
+                  "Commitment to quality. Focused on life."
                 </p>
                 <div className="flex flex-wrap gap-3 mb-8">
-                  {["WHO Certified", "GMP Certified", "ISO 9001:2015"].map(
-                    (badge) => (
-                      <span
-                        key={badge}
-                        className="flex items-center gap-1.5 text-sm font-medium text-[#1253A1] bg-blue-50 px-3 py-1.5 rounded-full"
-                      >
-                        <CheckCircle className="w-3.5 h-3.5 text-[#2ecc71]" />
-                        {badge}
-                      </span>
-                    )
-                  )}
+                  {[
+                    "WHO Compliant",
+                    "GMP Certified",
+                    "ISO 9001:2015 Certified",
+                  ].map((badge) => (
+                    <span
+                      key={badge}
+                      className="flex items-center gap-1.5 text-sm font-medium text-[#1253A1] bg-blue-50 px-3 py-1.5 rounded-full"
+                    >
+                      <CheckCircle className="w-3.5 h-3.5 text-[#2ecc71]" />
+                      {badge}
+                    </span>
+                  ))}
                 </div>
                 <Link
                   to="/about"
@@ -435,53 +398,17 @@ const Home = () => {
             {/* Visual */}
             <FadeUp delay={0.2}>
               <div className="relative h-80 md:h-96">
-                {/* Main card */}
                 <div
                   className="absolute inset-0 rounded-3xl overflow-hidden"
                   style={{
                     background: "linear-gradient(135deg, #1253A1, #2a5298)",
                   }}
                 >
-                  {/* Abstract medical visual */}
-                  <div className="absolute inset-0">
-                    {[...Array(3)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute rounded-full border border-white/10"
-                        style={{
-                          width: 150 + i * 100,
-                          height: 150 + i * 100,
-                          left: "50%",
-                          top: "50%",
-                          transform: "translate(-50%,-50%)",
-                        }}
-                        animate={{ rotate: i % 2 === 0 ? 360 : -360 }}
-                        transition={{
-                          duration: 15 + i * 5,
-                          repeat: Infinity,
-                          ease: "linear",
-                        }}
-                      />
-                    ))}
-                    {/* Center icon */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.div
-                        className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                      >
-                        <Heart
-                          className="w-10 h-10 text-white"
-                          fill="white"
-                          fillOpacity={0.3}
-                        />
-                      </motion.div>
-                    </div>
-                  </div>
+                  <MoleculeGraphic />
                   <div className="absolute bottom-6 left-6 right-6">
                     <p className="text-white/80 text-sm italic">
-                      "Our mission is to provide innovative, affordable
-                      healthcare solutions that improve lives across the world."
+                      "To become a globally trusted healthcare company by
+                      delivering quality, innovation, and excellence."
                     </p>
                   </div>
                 </div>
@@ -496,8 +423,8 @@ const Home = () => {
                     <CheckCircle className="w-5 h-5 text-[#2ecc71]" />
                   </div>
                   <div>
-                    <div className="text-xs text-gray-500">Quality Score</div>
-                    <div className="font-bold text-[#1253A1]">99.8%</div>
+                    <div className="text-xs text-gray-500">Since</div>
+                    <div className="font-bold text-[#1253A1]">1998</div>
                   </div>
                 </motion.div>
 
@@ -510,9 +437,11 @@ const Home = () => {
                     <Globe className="w-5 h-5 text-[#0a8987]" />
                   </div>
                   <div>
-                    <div className="text-xs text-gray-500">Global Reach</div>
+                    <div className="text-xs text-gray-500">
+                      Manufacturing Reach
+                    </div>
                     <div className="font-bold text-[#1253A1]">
-                      10+ Countries
+                      20+ Countries
                     </div>
                   </div>
                 </motion.div>
@@ -522,8 +451,55 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* Vision & Mission */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-10">
+            <FadeUp>
+              <div className="h-full p-8 rounded-3xl bg-[#f8fafc] border border-gray-100">
+                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-5">
+                  <Compass className="w-7 h-7 text-[#1253A1]" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1253A1] mb-3">
+                  Our Vision
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To become a globally trusted healthcare company by delivering
+                  quality, innovation, and excellence in pharmaceutical and
+                  nutraceutical solutions.
+                </p>
+              </div>
+            </FadeUp>
+            <FadeUp delay={0.15}>
+              <div className="h-full p-8 rounded-3xl bg-[#f8fafc] border border-gray-100">
+                <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mb-5">
+                  <Target className="w-7 h-7 text-[#0a8987]" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1253A1] mb-3">
+                  Our Mission
+                </h3>
+                <ul className="space-y-2 text-gray-600">
+                  {[
+                    "Deliver safe, effective, and high-quality healthcare products.",
+                    "Uphold the highest standards of quality and ethics.",
+                    "Build lasting partnerships through trust and customer satisfaction.",
+                    "Drive continuous innovation to meet evolving healthcare needs.",
+                    "Expand our global presence with excellence.",
+                  ].map((line) => (
+                    <li key={line} className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-[#2ecc71] mt-1 shrink-0" />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Categories */}
+      <section className="py-20 bg-[#f8fafc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-14">
@@ -531,11 +507,11 @@ const Home = () => {
                 Our Portfolio
               </span>
               <h2 className="text-4xl font-bold text-[#1253A1] mb-4">
-                Our Product Range
+                Therapeutic Segments
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                A diversified portfolio spanning critical product range, backed
-                by decades of research and clinical excellence.
+                A diversified portfolio spanning fourteen therapeutic segments,
+                manufactured at WHO-GMP certified facilities.
               </p>
             </div>
           </FadeUp>
@@ -544,26 +520,24 @@ const Home = () => {
             {productCategories.map((cat, i) => {
               const Icon = cat.icon;
               return (
-                <FadeUp key={cat.title} delay={i * 0.1}>
+                <FadeUp key={cat.title} delay={Math.min(i * 0.06, 0.4)}>
                   <Link to="/products">
                     <div className="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group cursor-pointer h-full">
                       <div
-                        className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
-                        style={{ background: `${cat.color}15` }}
+                        className="w-14 h-14 flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
+                        style={{
+                          background: `${cat.color}15`,
+                          clipPath: `polygon(${hexPoints})`,
+                        }}
                       >
                         <Icon
                           className="w-7 h-7"
                           style={{ color: cat.color }}
                         />
                       </div>
-                      <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-lg font-bold text-[#1253A1]">
-                          {cat.title}
-                        </h3>
-                        <span className="text-xs font-medium text-gray-400 bg-gray-50 px-2 py-1 rounded-full shrink-0">
-                          {cat.count} Products
-                        </span>
-                      </div>
+                      <h3 className="text-lg font-bold text-[#1253A1] mb-2">
+                        {cat.title}
+                      </h3>
                       <p className="text-gray-500 text-sm leading-relaxed mb-4">
                         {cat.desc}
                       </p>
@@ -596,13 +570,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Product Range Horizontal Scroll */}
-      <section className="py-16 bg-[#f8fafc] overflow-hidden">
+      {/* Product Range — two counter-scrolling rows instead of one marquee */}
+      <section className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <div className="text-center mb-10">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#0a8987] bg-[#b5fbfa] px-4 py-1.5 rounded-full mb-3">
-                Product Range Expertise
+                Segment Expertise
               </span>
               <h2 className="text-4xl font-bold text-[#1253A1]">
                 Areas We Serve
@@ -610,48 +584,89 @@ const Home = () => {
             </div>
           </FadeUp>
 
-          <div className="overflow-hidden w-full h-46">
-            <motion.div
-              className="flex gap-4 mt-2"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 20,
-                ease: "linear",
-              }}
-              whileHover={{ animationPlayState: "paused" }}
-            >
-              {[...therapeuticAreaCards, ...therapeuticAreaCards].map(
-                (area, i) => {
-                  const Icon = area.icon;
-
-                  return (
-                    <div key={`${area.title}-${i}`} className="shrink-0">
-                      <Link to="/products">
-                        <div className="w-44 h-40 bg-white rounded-2xl p-6 flex flex-col items-center gap-3 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer border border-gray-100">
-                          <div
-                            className="w-14 h-14 rounded-2xl flex items-center justify-center"
-                            style={{ background: `${area.color}15` }}
-                          >
-                            <Icon
-                              className="w-7 h-7"
-                              style={{ color: area.color }}
-                            />
+          {[0, 1].map((row) => {
+            const half = Math.ceil(productCategories.length / 2);
+            const items =
+              row === 0
+                ? productCategories.slice(0, half)
+                : productCategories.slice(half);
+            return (
+              <div key={row} className="overflow-hidden w-full h-40 mb-2">
+                <motion.div
+                  className="flex gap-4"
+                  animate={{ x: row === 0 ? ["0%", "-50%"] : ["-50%", "0%"] }}
+                  transition={{
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 22,
+                    ease: "linear",
+                  }}
+                >
+                  {[...items, ...items].map((area, i) => {
+                    const Icon = area.icon;
+                    return (
+                      <div key={`${area.title}-${i}`} className="shrink-0">
+                        <Link to="/products">
+                          <div className="w-44 h-36 bg-[#f8fafc] rounded-2xl p-5 flex flex-col items-center gap-3 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer border border-gray-100">
+                            <div
+                              className="w-12 h-12 flex items-center justify-center"
+                              style={{
+                                background: `${area.color}15`,
+                                clipPath: `polygon(${hexPoints})`,
+                              }}
+                            >
+                              <Icon
+                                className="w-6 h-6"
+                                style={{ color: area.color }}
+                              />
+                            </div>
+                            <div className="text-xs h-[52px] flex items-center justify-center font-semibold text-[#1253A1] text-center">
+                              {area.title}
+                            </div>
                           </div>
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </motion.div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
-                          <div className="text-sm h-[82px] flex items-center justify-center font-semibold text-[#1253A1] text-center">
-                            {area.title}
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  );
-                }
-              )}
-            </motion.div>
+      {/* Global Presence */}
+      <section className="py-20 bg-[#f8fafc]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <div className="text-center mb-14">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#0a8987] bg-[#b5fbfa] px-4 py-1.5 rounded-full mb-3">
+                Helik Healthcare — Export Division
+              </span>
+              <h2 className="text-4xl font-bold text-[#1253A1] mb-4">
+                Global Presence
+              </h2>
+              <p className="text-gray-500 max-w-xl mx-auto">
+                Established in 2020, Helik Healthcare carries our products to
+                partners across Nepal, Bhutan and the UAE, with manufacturing
+                capability serving 20+ countries and growing.
+              </p>
+            </div>
+          </FadeUp>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {globalPresence.map((g, i) => (
+              <FadeUp key={g.country} delay={i * 0.1}>
+                <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 text-center h-full">
+                  <div className="text-4xl mb-4">{g.flag}</div>
+                  <h3 className="text-lg font-bold text-[#1253A1] mb-2">
+                    {g.country}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {g.note}
+                  </p>
+                </div>
+              </FadeUp>
+            ))}
           </div>
         </div>
       </section>
@@ -662,27 +677,30 @@ const Home = () => {
           <FadeUp>
             <div className="text-center mb-14">
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#0a8987] bg-[#b5fbfa] px-4 py-1.5 rounded-full mb-3">
-                Why Helik
+                Why Gamete Healthcare
               </span>
               <h2 className="text-4xl font-bold text-[#1253A1] mb-4">
-                The Helik Difference
+                The Gamete Difference
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Three core pillars that have made Helik Healthcare a trusted
-                name in global pharmaceuticals.
+                Six reasons partners across India and abroad choose to work with
+                us.
               </p>
             </div>
           </FadeUp>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyUsItems.map((item, i) => {
               const Icon = item.icon;
               return (
-                <FadeUp key={item.title} delay={i * 0.15}>
-                  <div className="text-center p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                <FadeUp key={item.title} delay={i * 0.1}>
+                  <div className="text-center p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1 group h-full">
                     <div
-                      className="w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
-                      style={{ background: `${item.color}15` }}
+                      className="w-16 h-16 mx-auto flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                      style={{
+                        background: `${item.color}15`,
+                        clipPath: `polygon(${hexPoints})`,
+                      }}
                     >
                       <Icon className="w-8 h-8" style={{ color: item.color }} />
                     </div>
@@ -733,26 +751,8 @@ const Home = () => {
           background: "linear-gradient(135deg, #0f2347, #1253A1 50%, #2a5298)",
         }}
       >
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(3)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full border border-white/5"
-              style={{
-                width: 200 + i * 200,
-                height: 200 + i * 200,
-                left: `${20 + i * 15}%`,
-                top: "50%",
-                transform: "translateY(-50%)",
-              }}
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 20 + i * 10,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
-          ))}
+        <div className="absolute inset-0 pointer-events-none opacity-40">
+          <MoleculeGraphic />
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -761,14 +761,14 @@ const Home = () => {
               Partnership Opportunities
             </span>
             <h2 className="text-4xl font-bold text-white mb-5 leading-tight">
-              Ready to Partner with a Global
+              Ready to Partner with a Trusted
               <br />
-              Pharmaceutical Leader?
+              Pharmaceutical Name?
             </h2>
             <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
               Whether you're a distributor, healthcare provider or investor —
-              Helik Healthcare offers strategic partnership models tailored to
-              your needs.
+              Gamete Healthcare and its export division, Helik Healthcare, offer
+              partnership models tailored to your needs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
