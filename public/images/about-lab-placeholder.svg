@@ -1,0 +1,19 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="820" rx="44" fill="url(#paint0_linear)"/>
+  <rect x="110" y="104" width="980" height="612" rx="30" fill="white" fill-opacity="0.85"/>
+  <rect x="166" y="164" width="868" height="256" rx="28" fill="#17B5B8" fill-opacity="0.13"/>
+  <rect x="166" y="468" width="404" height="42" rx="21" fill="#0F58B3" fill-opacity="0.12"/>
+  <rect x="166" y="540" width="736" height="36" rx="18" fill="#0F58B3" fill-opacity="0.1"/>
+  <rect x="166" y="604" width="812" height="36" rx="18" fill="#17B5B8" fill-opacity="0.14"/>
+  <circle cx="260" cy="292" r="64" fill="#0F58B3" fill-opacity="0.18"/>
+  <circle cx="510" cy="292" r="64" fill="#17B5B8" fill-opacity="0.22"/>
+  <circle cx="760" cy="292" r="64" fill="#0F58B3" fill-opacity="0.18"/>
+  <text x="168" y="86" fill="#0B1C38" font-family="Arial, sans-serif" font-size="30" font-weight="700">About image placeholder</text>
+  <text x="168" y="758" fill="#0B1C38" font-family="Arial, sans-serif" font-size="28" font-weight="700">Replace with laboratory, quality, warehouse, or leadership photography</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="63" y1="36" x2="1139" y2="781" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF8FF"/>
+      <stop offset="1" stop-color="#F2FCFC"/>
+    </linearGradient>
+  </defs>
+</svg>

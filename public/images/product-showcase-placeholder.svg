@@ -1,0 +1,17 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="820" rx="44" fill="url(#paint0_linear)"/>
+  <rect x="104" y="104" width="992" height="612" rx="30" fill="white" fill-opacity="0.86"/>
+  <rect x="164" y="172" width="220" height="420" rx="28" fill="#0F58B3" fill-opacity="0.14"/>
+  <rect x="420" y="220" width="220" height="372" rx="28" fill="#17B5B8" fill-opacity="0.18"/>
+  <rect x="676" y="268" width="220" height="324" rx="28" fill="#0F58B3" fill-opacity="0.14"/>
+  <rect x="932" y="316" width="104" height="276" rx="24" fill="#17B5B8" fill-opacity="0.18"/>
+  <rect x="164" y="636" width="872" height="34" rx="17" fill="#0F58B3" fill-opacity="0.1"/>
+  <text x="168" y="86" fill="#0B1C38" font-family="Arial, sans-serif" font-size="30" font-weight="700">Product showcase placeholder</text>
+  <text x="168" y="758" fill="#0B1C38" font-family="Arial, sans-serif" font-size="28" font-weight="700">Replace with packshots, range grids, cartons, bottles, tubes, or blister photography</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="84" y1="42" x2="1118" y2="782" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FDFF"/>
+      <stop offset="1" stop-color="#EAF7F8"/>
+    </linearGradient>
+  </defs>
+</svg>

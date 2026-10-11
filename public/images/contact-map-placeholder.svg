@@ -1,0 +1,17 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="820" rx="44" fill="url(#paint0_linear)"/>
+  <rect x="108" y="104" width="984" height="612" rx="30" fill="white" fill-opacity="0.86"/>
+  <path d="M220 236C220 209.49 241.49 188 268 188H932C958.51 188 980 209.49 980 236V584C980 610.51 958.51 632 932 632H268C241.49 632 220 610.51 220 584V236Z" fill="#0F58B3" fill-opacity="0.08"/>
+  <path d="M320 250L452 382L320 514" stroke="#17B5B8" stroke-opacity="0.62" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 220L680 410L520 600" stroke="#0F58B3" stroke-opacity="0.5" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="844" cy="330" r="74" fill="#17B5B8" fill-opacity="0.22"/>
+  <path d="M844 286C815.833 286 793 308.833 793 337C793 381.625 844 441 844 441C844 441 895 381.625 895 337C895 308.833 872.167 286 844 286ZM844 355.7C833.674 355.7 825.3 347.326 825.3 337C825.3 326.674 833.674 318.3 844 318.3C854.326 318.3 862.7 326.674 862.7 337C862.7 347.326 854.326 355.7 844 355.7Z" fill="#0F58B3"/>
+  <text x="168" y="86" fill="#0B1C38" font-family="Arial, sans-serif" font-size="30" font-weight="700">Contact image placeholder</text>
+  <text x="168" y="758" fill="#0B1C38" font-family="Arial, sans-serif" font-size="28" font-weight="700">Replace with office location map, building exterior, or logistics presence visual</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="63" y1="40" x2="1132" y2="782" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FDFF"/>
+      <stop offset="1" stop-color="#ECF8FB"/>
+    </linearGradient>
+  </defs>
+</svg>

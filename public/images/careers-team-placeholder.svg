@@ -1,0 +1,18 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="820" rx="44" fill="url(#paint0_linear)"/>
+  <rect x="108" y="108" width="984" height="604" rx="30" fill="white" fill-opacity="0.86"/>
+  <circle cx="310" cy="312" r="88" fill="#0F58B3" fill-opacity="0.16"/>
+  <circle cx="598" cy="312" r="88" fill="#17B5B8" fill-opacity="0.22"/>
+  <circle cx="886" cy="312" r="88" fill="#0F58B3" fill-opacity="0.16"/>
+  <rect x="188" y="470" width="824" height="40" rx="20" fill="#0F58B3" fill-opacity="0.12"/>
+  <rect x="188" y="542" width="612" height="34" rx="17" fill="#17B5B8" fill-opacity="0.16"/>
+  <rect x="188" y="604" width="712" height="34" rx="17" fill="#0F58B3" fill-opacity="0.1"/>
+  <text x="168" y="86" fill="#0B1C38" font-family="Arial, sans-serif" font-size="30" font-weight="700">Careers image placeholder</text>
+  <text x="168" y="758" fill="#0B1C38" font-family="Arial, sans-serif" font-size="28" font-weight="700">Replace with team collaboration, plant workforce, training, or office culture imagery</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="67" y1="42" x2="1127" y2="789" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2FAFF"/>
+      <stop offset="1" stop-color="#EDF9FA"/>
+    </linearGradient>
+  </defs>
+</svg>
