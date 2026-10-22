@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap");
+@import "tailwindcss";
 
 :root {
   --brand-blue: #0f58b3;
@@ -7,12 +8,11 @@
   --muted-strong: #35506f;
   --muted: #62758d;
   --surface: #ffffff;
-  --font-body: 'Manrope', sans-serif;
-  --font-heading: 'Manrope', sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-heading: "Manrope", sans-serif;
   font: 16px/1.6 var(--font-body);
   color: var(--muted-strong);
-  background:
-    linear-gradient(180deg, #f7fbff 0%, #ffffff 18%, #ffffff 100%);
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 18%, #ffffff 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
