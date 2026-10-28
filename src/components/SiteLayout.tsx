@@ -204,9 +204,9 @@ export function SiteLayout({ children }: SiteLayoutProps) {
         <section className="footer-bottom">
           <p>© 2026 Gamete Healthcare Pvt Ltd. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <a href="/">Privacy Policy</a>
-            <a href="/">Terms of Use</a>
-            <a href="/">Terms & Conditions</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-use">Terms of Use</a>
+            <a href="/terms-and-conditions">Terms & Conditions</a>
           </div>
         </section>
       </footer>

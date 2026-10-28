@@ -1,18 +1,44 @@
 import { InnerPageHero } from "../components/InnerPageHero";
 import { Reveal } from "../components/Reveal";
 import type { Product } from "../App";
-import {
-  dosageForms,
-  productCategories,
-  productPrograms,
-  products,
-} from "../siteData";
+import { dosageForms, productCategories, productPrograms } from "../siteData";
+import { newLaunched } from "../data/NewLaunched";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import ProductModal from "../components/ProductModal";
 
-type ProductsPageProps = {
-  onOpenProduct: (product: Product) => void;
+export const FadeUp = ({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
 };
 
-export function ProductsPage({ onOpenProduct }: ProductsPageProps) {
+export function ProductsPage() {
+  const [open, setOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const handleClose = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
     <>
       <InnerPageHero
@@ -67,29 +93,45 @@ export function ProductsPage({ onOpenProduct }: ProductsPageProps) {
 
       <section className="products-section">
         <div className="products-grid">
-          {products.map((product, index) => (
-            <Reveal
-              key={product.name}
-              delay={index * 0.05}
-              className={`product-card product-card-${product.accent}`}
-            >
-              <div className="product-card-media">
-                <img src={product.image} alt={product.name} />
+          {newLaunched.map((cat, i) => (
+            <FadeUp key={cat.name} delay={i * 0.08}>
+              <div className="bg-white border border-[#e1edf7] p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group h-full">
+                <div className="flex items-center justify-center mb-5 transition-transform group-hover:scale-110">
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    className="w-full object-fill md:h-[222px]"
+                  />
+                </div>
+
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-bold text-[#1a3a6b]">
+                    {cat.name}
+                  </h3>
+                </div>
+
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 truncate">
+                  {cat.description}
+                </p>
+
+                <button
+                  onClick={() => {
+                    setSelectedProduct(cat);
+                    setOpen(true);
+                  }}
+                  className="cursor-pointer w-full flex justify-center items-center gap-1 text-sm group-hover:gap-2 transition-all"
+                >
+                  <div
+                    style={{
+                      background: "linear-gradient(135deg, #1a3a6b, #2a5298)",
+                    }}
+                    className="px-4 py-2 rounded-full text-white font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  >
+                    View Details
+                  </div>
+                </button>
               </div>
-              <div className="product-chip-row">
-                <span className="product-chip">{product.category}</span>
-                <span className="product-form">{product.form}</span>
-              </div>
-              <h3>{product.name}</h3>
-              <p>{product.summary}</p>
-              <button
-                type="button"
-                className="text-link"
-                onClick={() => onOpenProduct(product)}
-              >
-                View details
-              </button>
-            </Reveal>
+            </FadeUp>
           ))}
         </div>
       </section>
@@ -146,6 +188,11 @@ export function ProductsPage({ onOpenProduct }: ProductsPageProps) {
             </Reveal>
           ))}
         </div>
+        <ProductModal
+          onClose={handleClose}
+          open={open}
+          product={selectedProduct}
+        />
       </section>
     </>
   );

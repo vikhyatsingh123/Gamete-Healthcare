@@ -1,46 +1,53 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
-import { ProductModal } from './components/ProductModal'
-import { SiteLayout } from './components/SiteLayout'
-import { AboutPage } from './pages/AboutPage'
-import { CareersPage } from './pages/CareersPage'
-import { ContactPage } from './pages/ContactPage'
-import { HomePage } from './pages/HomePage'
-import { ProductsPage } from './pages/ProductsPage'
-import { products } from './siteData'
-import './site.css'
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { SiteLayout } from "./components/SiteLayout";
+import { AboutPage } from "./pages/AboutPage";
+import { CareersPage } from "./pages/CareersPage";
+import { ContactPage } from "./pages/ContactPage";
+import { HomePage } from "./pages/HomePage";
+import { ProductsPage } from "./pages/ProductsPage";
 
-export type Product = (typeof products)[number]
+import "./site.css";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import TermsOfUse from "./pages/TermsOfUse";
+
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  image: any;
+}
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
-  const location = useLocation()
+  const [isLoading, setIsLoading] = useState(true);
+
+  const location = useLocation();
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      setIsLoading(false)
-    }, 1800)
+      setIsLoading(false);
+    }, 1800);
 
-    return () => window.clearTimeout(timer)
-  }, [])
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [location.pathname])
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
-    const previousOverflow = document.body.style.overflow
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
 
-    if (isLoading || selectedProduct) {
-      document.body.style.overflow = 'hidden'
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.body.style.overflow = previousOverflow
-    }
-  }, [isLoading, selectedProduct])
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isLoading]);
 
   return (
     <>
@@ -49,7 +56,10 @@ function App() {
           <motion.div
             className="loader-screen"
             initial={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.55, ease: 'easeInOut' } }}
+            exit={{
+              opacity: 0,
+              transition: { duration: 0.55, ease: "easeInOut" },
+            }}
           >
             <motion.div
               className="loader-mark"
@@ -61,7 +71,11 @@ function App() {
               <motion.div
                 className="loader-signature-shell"
                 animate={{ y: [0, -5, 0], scale: [1, 1.01, 1] }}
-                transition={{ duration: 2.8, repeat: Number.POSITIVE_INFINITY, ease: 'easeInOut' }}
+                transition={{
+                  duration: 2.8,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                }}
               >
                 <svg
                   className="loader-signature"
@@ -70,7 +84,13 @@ function App() {
                   aria-hidden="true"
                 >
                   <defs>
-                    <linearGradient id="loaderSignatureGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <linearGradient
+                      id="loaderSignatureGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
                       <stop offset="0%" stopColor="#0f58b3" />
                       <stop offset="58%" stopColor="#0d72ca" />
                       <stop offset="100%" stopColor="#17b5b8" />
@@ -90,8 +110,18 @@ function App() {
                   </text>
 
                   <g className="loader-signature-accent">
-                    <circle className="loader-signature-orbit" cx="666" cy="109" r="36" />
-                    <circle className="loader-signature-orbit-secondary" cx="666" cy="109" r="25" />
+                    <circle
+                      className="loader-signature-orbit"
+                      cx="666"
+                      cy="109"
+                      r="36"
+                    />
+                    <circle
+                      className="loader-signature-orbit-secondary"
+                      cx="666"
+                      cy="109"
+                      r="25"
+                    />
                     <polygon
                       className="loader-signature-star"
                       points="705,60 710,75 726,75 713,84 718,99 705,89 692,99 697,84 684,75 700,75"
@@ -124,29 +154,35 @@ function App() {
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
-              initial={{ opacity: 0, y: 36, scale: 0.985, filter: 'blur(10px)' }}
-              animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, y: -28, scale: 0.992, filter: 'blur(8px)' }}
+              initial={{
+                opacity: 0,
+                y: 36,
+                scale: 0.985,
+                filter: "blur(10px)",
+              }}
+              animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -28, scale: 0.992, filter: "blur(8px)" }}
               transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
             >
               <Routes location={location}>
-                <Route path="/" element={<HomePage onOpenProduct={setSelectedProduct} />} />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
-                <Route
-                  path="/products"
-                  element={<ProductsPage onOpenProduct={setSelectedProduct} />}
-                />
+                <Route path="/products" element={<ProductsPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-use" element={<TermsOfUse />} />
+                <Route
+                  path="/terms-and-conditions"
+                  element={<TermsAndConditions />}
+                />
               </Routes>
             </motion.div>
           </AnimatePresence>
         </SiteLayout>
       ) : null}
-
-      <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
