@@ -1,7 +1,7 @@
 import { InnerPageHero } from "../components/InnerPageHero";
 import { Reveal } from "../components/Reveal";
 import type { Product } from "../App";
-import { dosageForms, productPrograms } from "../siteData";
+import { dosageForms } from "../siteData";
 import { newLaunched } from "../data/NewLaunched";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -44,31 +44,38 @@ export function ProductsPage() {
       <InnerPageHero
         eyebrow="Products"
         title={[
-          "A structured catalogue that can scale with your real portfolio.",
+          "Quality Healthcare Products",
+          "Built on Experience, Driven by Efficacy",
         ]}
         backgroundImage="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1600&q=80"
         backgroundAlt="Pharmaceutical bottles and product packaging"
         spotlight={{
-          value: "8 categories and multiple dosage pathways",
-          text: "A cleaner catalogue introduction for retail, institutional, and export-facing conversations.",
+          value:
+            "15+ therapeutic categories across diverse healthcare segments",
+          text: "From antibiotics and cardiac care to nutrition and wellness, explore our broad range of therapeutic categories.",
         }}
         cards={[
           {
-            title: "Therapeutic range overview",
-            text: "Visitors understand breadth faster through structured category framing.",
+            title: "100+ Quality Products",
+            text: "A diverse portfolio of healthcare products focused on quality, efficacy, and evolving healthcare needs.",
           },
           {
-            title: "Modal-driven product context",
-            text: "Each product opens into a deeper layer without leaving the catalogue flow.",
+            title: "25 Years of Experience",
+            text: "Built on 25 years of industry experience, with a continued commitment to quality and effective healthcare solutions.",
           },
           {
-            title: "Dosage and pack storytelling",
-            text: "Supports a more complete pharma portfolio presentation from the first screen.",
+            title: "20+ Stockists | 500+ Retail Outlets",
+            text: "A growing distribution network that expands product availability and strengthens our reach across the market.",
           },
         ]}
       />
 
       <section className="products-section">
+        <div className="section-heading">
+          <span className="eyebrow">Our Products</span>
+          <h2>Diversified Portfolio</h2>
+        </div>
+
         <div className="products-grid">
           {newLaunched.map((cat, i) => (
             <FadeUp key={cat.name} delay={i * 0.08}>
@@ -113,39 +120,14 @@ export function ProductsPage() {
         </div>
       </section>
 
-      <section className="color-band-section color-band-teal">
-        <div className="section-heading section-heading-centered section-heading-light">
-          <span className="eyebrow eyebrow-light">Product programs</span>
-          <h2>More structure for how the catalogue should be understood</h2>
-        </div>
-        <div className="band-grid band-grid-three">
-          {productPrograms.map((item, index) => (
-            <Reveal
-              key={item.title}
-              delay={index * 0.06}
-              className="band-card"
-              direction="up"
-            >
-              <span className="band-card-icon">{item.icon}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       <section className="dosage-section">
         <div className="section-heading section-heading-wide">
           <div>
             <span className="eyebrow">Dosage forms</span>
             <h2>
-              Presentation depth that feels closer to a real pharma catalogue
+              Discover our range of dosage forms and product presentations.
             </h2>
           </div>
-          <p>
-            A wider product website usually communicates not just brands, but
-            also formats, packs, and portfolio capabilities.
-          </p>
         </div>
         <div className="dosage-grid">
           {dosageForms.map((item, index) => (
@@ -158,10 +140,12 @@ export function ProductsPage() {
               <div className="card-media-header card-media-header-dosage">
                 <img src={item.image} alt={item.title} />
               </div>
-              <span className="category-index">
-                {`${index + 1}`.padStart(2, "0")}
-              </span>
-              <h3>{item.title}</h3>
+              <div className="flex items-center gap-2">
+                <span className="category-index">
+                  {`${index + 1}`.padStart(2, "0")}
+                </span>
+                <h3>{item.title}</h3>
+              </div>
             </Reveal>
           ))}
         </div>

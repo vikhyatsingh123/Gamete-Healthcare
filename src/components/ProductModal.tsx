@@ -492,9 +492,9 @@ const ProductModal: React.FC<ProductModalProps> = ({
                   absolute
                   inset-0
                   bg-gradient-to-br
-                  from-emerald-50
-                  via-white
-                  to-green-100
+                  from-[#e3eeee]
+                  via-[#d7e6e8]
+                  to-[#a0c3ce]
                 "
               />
 

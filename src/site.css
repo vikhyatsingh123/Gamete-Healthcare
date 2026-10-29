@@ -1736,9 +1736,14 @@
 }
 
 .band-grid-three,
-.timeline-grid,
-.dosage-grid {
+.timeline-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.dosage-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
   max-width: 1120px;
   margin-inline: auto;
 }

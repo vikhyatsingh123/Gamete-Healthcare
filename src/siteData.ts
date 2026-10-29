@@ -3,6 +3,33 @@ import TransparencyIcon from "./assets/icons/transparency.png";
 import ReliabilityIcon from "./assets/icons/reliability.png";
 import { Building2, Globe2, Rocket, Sprout } from "lucide-react";
 
+import image1 from "./assets/dosage-forms/image1.png";
+import image2 from "./assets/dosage-forms/image2.png";
+import image3 from "./assets/dosage-forms/image3.png";
+import image4 from "./assets/dosage-forms/image4.png";
+import image5 from "./assets/dosage-forms/image5.png";
+import image6 from "./assets/dosage-forms/image6.png";
+
+import pcimage2 from "./assets/product-category/image2.png";
+import pcimage4 from "./assets/product-category/image4.png";
+import pcimage5 from "./assets/product-category/image5.png";
+import pcimage6 from "./assets/product-category/image6.png";
+import pcimage7 from "./assets/product-category/image7.png";
+import pcimage8 from "./assets/product-category/image8.png";
+import pcimage9 from "./assets/product-category/image9.png";
+import pcimage10 from "./assets/product-category/image10.png";
+import pcimage11 from "./assets/product-category/image11.png";
+import pcimage12 from "./assets/product-category/image12.png";
+import pcimage13 from "./assets/product-category/image13.png";
+import pcimage14 from "./assets/product-category/image14.png";
+import pcimage15 from "./assets/product-category/image15.png";
+import pcimage16 from "./assets/product-category/image16.png";
+import pcimage17 from "./assets/product-category/image17.png";
+import pcimage18 from "./assets/product-category/image18.png";
+import pcimage19 from "./assets/product-category/image19.png";
+import pcimage20 from "./assets/product-category/image20.png";
+import pcimage21 from "./assets/product-category/image21.png";
+
 export const navigation = [
   { label: "Home", to: "/" },
   { label: "About us", to: "/about" },
@@ -51,128 +78,131 @@ export const footerGroups = {
 };
 
 export const homeStats = [
-  { value: "3+", label: "Decades Of market presence" },
+  { value: "25+", label: "years Of market presence" },
   { value: "500+", label: "Pharmaceutical product ranges" },
   { value: "10+", label: "Lakhs of patients served" },
-  { value: "300+", label: "Healthcare and channel partners" },
-];
-
-export const storyHighlights = [
-  {
-    icon: "Care",
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
-    title: "Integrated healthcare approach",
-    text: "Gamete Healthcare aligns product planning, packaging clarity, and commercial communication around long-term market trust.",
-  },
-  {
-    icon: "Science",
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-    title: "Science-led presentation",
-    text: "Every brand touchpoint is designed to reflect disciplined quality, therapeutic relevance, and confident pharmaceutical positioning.",
-  },
-  {
-    icon: "Scale",
-    image:
-      "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=1200&q=80",
-    title: "Scalable portfolio storytelling",
-    text: "From flagship SKUs to wider therapeutic ranges, the platform is shaped to support future product discovery and business development.",
-  },
+  { value: "500+", label: "Retailers and distributor partners" },
 ];
 
 export const manufacturingPillars = [
   {
-    icon: "QC",
-    title: "Quality consistency",
-    text: "Every formulation program is approached with repeatable manufacturing discipline, documentation readiness, and category-specific quality intent.",
+    icon: "EST. 1998",
+    title: "Decades of Experience",
+    text: "Established in 1998, Helik Healthcare Pvt. Ltd. brings years of industry experience and a commitment to dependable pharmaceutical solutions.",
   },
   {
-    icon: "OTD",
-    title: "Timely delivery",
-    text: "Our supply promise is built around dependable timelines, responsive coordination, and confidence for distributors and institutional buyers.",
+    icon: "DISTRIBUTION",
+    title: "Strong Distribution Network",
+    text: "Our strong distribution network supports efficient product reach, reliable coordination, and lasting business relationships.",
   },
   {
-    icon: "Reg",
-    title: "Regulatory compliance",
-    text: "Compliance-first thinking supports how the company communicates quality, market readiness, and healthcare responsibility.",
+    icon: "GLOBAL EXPORTS",
+    title: "Dedicated Export Division",
+    text: "Our dedicated export division focuses on international markets, responsive service, and building trusted global partnerships.",
   },
 ];
 
 export const productCategories = [
   {
     id: "01",
-    image:
-      "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=1200&q=80",
-    title: "Nutraceuticals & Herbal Supplements",
-    text: "Preventive wellness and nutrition-driven formulations positioned for daily health support.",
+    image: pcimage19,
+    title: "Antibiotics",
   },
   {
     id: "02",
-    image:
-      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1200&q=80",
-    title: "Cardiovascular System",
-    text: "Therapy concepts designed for heart health, long-term care, and patient adherence.",
+    image: pcimage18,
+    title: "Analgesics / Pain Management",
   },
   {
     id: "03",
-    image:
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
-    title: "Orthopedic & Pain Care",
-    text: "Mobility, inflammation, and recovery-focused solutions aligned to fast-moving demand.",
+    image: pcimage17,
+    title: "Antacids / GI Range",
   },
   {
     id: "04",
-    image:
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1200&q=80",
-    title: "Dermatology & Topicals",
-    text: "Clinical skin, cosmetic care, and topical recovery products for modern portfolios.",
+    image: pcimage16,
+    title: "Antihypertensives",
   },
   {
     id: "05",
-    image:
-      "https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=1200&q=80",
-    title: "General Wellness",
-    text: "Everyday health products designed to support retail, institutional, and distribution programs.",
+    image: pcimage15,
+    title: "Antidiabetics",
   },
   {
     id: "06",
-    image:
-      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
-    title: "Women’s Health",
-    text: "Focused wellness and care formulations positioned for category-led healthcare growth.",
+    image: pcimage20,
+    title: "Vitamins & Supplements",
   },
   {
     id: "07",
-    image:
-      "https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1200&q=80",
-    title: "Respiratory & Anti-Allergic",
-    text: "Supportive therapies designed for seasonal, chronic, and recovery-focused respiratory needs.",
+    image: pcimage21,
+    title: "Cough & Cold",
   },
   {
     id: "08",
-    image:
-      "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=1200&q=80",
-    title: "Gastro & Digestive Care",
-    text: "Digestive and metabolic wellness solutions positioned for routine care and broad pharmacy relevance.",
+    image: pcimage14,
+    title: "Dermatology Range",
   },
-];
+  {
+    id: "09",
+    image: pcimage16,
+    title: "Cardiac Range",
+  },
+  {
+    id: "10",
+    image: pcimage13,
+    title: "Orthopedic Range",
+  },
+  {
+    id: "11",
+    image: pcimage12,
+    title: "Gynecology Range",
+  },
 
-export const valuePillars = [
   {
-    icon: "Q",
-    title: "Quality",
-    text: "A disciplined quality philosophy strengthens trust across healthcare professionals, partners, and end-market conversations.",
+    id: "12",
+    image: pcimage11,
+    title: "Pediatric Range",
   },
   {
-    icon: "A",
-    title: "Affordability",
-    text: "Accessible healthcare positioning helps create stronger relevance across diverse patient and distribution ecosystems.",
+    id: "13",
+    image: pcimage5,
+    title: "Nutraceuticals",
   },
   {
-    icon: "Reach",
-    title: "Accessibility",
-    text: "From portfolio structure to outreach readiness, the business is positioned to reach buyers, distributors, and institutions more effectively.",
+    id: "14",
+    image: pcimage10,
+    title: "Vaccines",
+  },
+  {
+    id: "15",
+    image: pcimage9,
+    title: "Hospital / Critical Care",
+  },
+  {
+    id: "16",
+    image: pcimage8,
+    title: "OTC Range",
+  },
+  {
+    id: "17",
+    image: pcimage6,
+    title: "Respiratory Range",
+  },
+  {
+    id: "18",
+    image: pcimage7,
+    title: "CNS Range",
+  },
+  {
+    id: "19",
+    image: pcimage4,
+    title: "Anti-infectivese",
+  },
+  {
+    id: "20",
+    image: pcimage2,
+    title: "Probiotics",
   },
 ];
 
@@ -430,50 +460,26 @@ export const regionalPresence = [
 export const dosageForms = [
   {
     title: "Tablets and capsules",
-    image:
-      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1200&q=80",
+    image: image6,
   },
   {
-    title: "Softgels and effervescents",
-    image:
-      "https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=1200&q=80",
+    title: "Softgels & Effervescent Forms",
+    image: image1,
   },
   {
-    title: "Topical gels and creams",
-    image:
-      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=80",
+    title: "Gels & Creams",
+    image: image5,
   },
   {
-    title: "Sachets and nutrition blends",
-    image:
-      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80",
+    title: "Sachets & Powder Blends",
+    image: image2,
   },
   {
-    title: "Liquid oral formats",
-    image:
-      "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1200&q=80",
+    title: "Oral Liquids & Syrups",
+    image: image3,
   },
   {
-    title: "Specialized wellness packs",
-    image:
-      "https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?auto=format&fit=crop&w=1200&q=80",
-  },
-];
-
-export const productPrograms = [
-  {
-    icon: "Therapy",
-    title: "Therapy-led grouping",
-    text: "Group the range in a way that helps doctors, distributors, and procurement teams understand therapeutic logic faster.",
-  },
-  {
-    icon: "Family",
-    title: "Brand-family presentation",
-    text: "Present related SKUs, pack sizes, and brand extensions through a more premium and coherent portfolio story.",
-  },
-  {
-    icon: "Fit",
-    title: "Retail to institutional fit",
-    text: "Build product narratives that hold up across pharmacy retail, hospital introductions, and export-facing conversations.",
+    title: "Specialized Nutritional Formulations",
+    image: image4,
   },
 ];
