@@ -209,6 +209,7 @@ import { Restzyme } from "../data/Restzyme";
 import { Texagam } from "../data/Texagam";
 import { Typal100 } from "../data/Typal100";
 import { Typal50 } from "../data/Typal50";
+import { createPortal } from "react-dom";
 
 export interface Product {
   id: string;
@@ -388,7 +389,7 @@ const ProductModal: React.FC<ProductModalProps> = ({
 
   if (!product) return null;
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {open && (
         <motion.div
@@ -683,7 +684,8 @@ const ProductModal: React.FC<ProductModalProps> = ({
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 

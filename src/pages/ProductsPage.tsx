@@ -1,7 +1,7 @@
 import { InnerPageHero } from "../components/InnerPageHero";
 import { Reveal } from "../components/Reveal";
 import type { Product } from "../App";
-import { dosageForms, productCategories, productPrograms } from "../siteData";
+import { dosageForms, productPrograms } from "../siteData";
 import { newLaunched } from "../data/NewLaunched";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
@@ -68,29 +68,6 @@ export function ProductsPage() {
         ]}
       />
 
-      <section className="categories-section">
-        <div className="section-heading">
-          <span className="eyebrow">Therapeutic categories</span>
-          <h2>Portfolio breadth that feels enterprise-ready</h2>
-        </div>
-        <div className="categories-grid categories-grid-large">
-          {productCategories.map((category, index) => (
-            <Reveal
-              key={category.title}
-              delay={index * 0.05}
-              className="category-card"
-            >
-              <div className="category-card-media">
-                <img src={category.image} alt={category.title} />
-                <span className="category-index">{category.id}</span>
-              </div>
-              <h3>{category.title}</h3>
-              <p>{category.text}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       <section className="products-section">
         <div className="products-grid">
           {newLaunched.map((cat, i) => (
@@ -100,7 +77,7 @@ export function ProductsPage() {
                   <img
                     src={cat.image}
                     alt={cat.name}
-                    className="w-full object-fill md:h-[222px]"
+                    className="block h-full w-full object-contain"
                   />
                 </div>
 
@@ -110,7 +87,7 @@ export function ProductsPage() {
                   </h3>
                 </div>
 
-                <p className="text-gray-600 text-sm leading-relaxed mb-4 truncate">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4! truncate">
                   {cat.description}
                 </p>
 

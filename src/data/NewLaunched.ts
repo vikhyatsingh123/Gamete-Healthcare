@@ -41,6 +41,90 @@ export const newLaunched = [
     image: bebact1,
   },
   {
+    id: "gpamPlus",
+    name: "GPAM Plus",
+    description:
+      "GPAM PLUS tablets is a a prescription combination containing escitalopram equivalent to 10 mg and clonazepam 0.5 mg per tablet. Escitalopram is an SSRI antidepressant, while clonazepam is a benzodiazepine. The combination must be used only under the supervision of a qualified medical practitioner. Follow the prescribed dosage and treatment duration. Avoid alcohol and do not discontinue regular clonazepam treatment abruptly. Schedule H prescription medicine.",
+    image: gampamPlus1,
+  },
+  {
+    id: "gametekLc",
+    name: "Gamtek-LC",
+    description:
+      "Gamtek-LC contains Montelukast Sodium equivalent to Montelukast 10 mg and Levocetirizine Dihydrochloride 5 mg per film-coated tablet. This prescription anti-allergic combination may be prescribed for selected allergic conditions. Pack size: 100 tablets (10 x 10). Use only as directed by a physician.",
+    image: gametek1,
+  },
+  {
+    id: "gametekPlus",
+    name: "Gamtek-Plus",
+    description:
+      "GAMTEK-PLUS contains Montelukast Sodium equivalent to Montelukast 10 mg and Bambuterol Hydrochloride 10 mg per film-coated tablet. This prescription combination may be prescribed for selected respiratory conditions. Pack size: 100 tablets (10 x 10). Use only as directed by a physician.",
+    image: gametekPlus1,
+  },
+  {
+    id: "gampam10",
+    name: "Gampam-10",
+    description:
+      "G-PAM-10 contains Escitalopram Oxalate IP equivalent to Escitalopram 10 mg per uncoated tablet. Escitalopram is an SSRI antidepressant prescribed for approved mental health indications under medical supervision. Pack size: 200 tablets (20 x 10). Schedule H prescription medicine.",
+    image: gampam101,
+  },
+  {
+    id: "gampam25",
+    name: "Gampam-0.25",
+    description:
+      "Gampam-0.25 MD contains Clonazepam IP 0.25 mg per uncoated mouth dissolving tablet. Clonazepam is a prescription benzodiazepine medicine used for specific approved indications under medical supervision. Pack size: 300 tablets (10 x 30). Store in a cool, dry and dark place. Schedule H prescription medicine.",
+    image: gampam251,
+  },
+  {
+    id: "gampam5",
+    name: "Gampam-0.5",
+    description:
+      "Gampam-0.5 contains Clonazepam IP 0.5 mg per uncoated tablet. Clonazepam is a benzodiazepine medicine prescribed for specific seizure disorders and other approved indications. Pack size: 100 tablets (10 x 10). Schedule H prescription medicine. Use only under medical supervision.",
+    image: gampam51,
+  },
+  {
+    id: "hipzol",
+    name: "Hipzol",
+    description:
+      "Hipzol-0.5 Tablets contain alprazolam IP 0.5 mg per uncoated tablet. Alprazolam is a benzodiazepine medicine prescribed for certain anxiety-related conditions when clinically appropriate. The pack contains 200 tablets (20 x 10). Use only as directed by a qualified medical practitioner. Alprazolam can cause drowsiness, dependence and withdrawal symptoms and may cause life-threatening respiratory depression when combined with opioids or other central nervous system depressants. Avoid alcohol and do not discontinue regular treatment abruptly. Schedule H prescription medicine.",
+    image: hipzol1,
+  },
+  {
+    id: "helizyme",
+    name: "Helizyme",
+    description:
+      "Helizyme Tablets is an Ayurvedic proprietary medicine containing Kutaj Extract 100 mg, Biliya Extract 100 mg, Marod Phali Extract 50 mg, Nagarmotha Extract 50 mg, Saunf Extract 50 mg and Sonth Extract 25 mg per film-coated tablet. The pack contains 100 tablets (10 x 10). The packaging directs use under medical supervision and advises storage in a cool, dry and dark place. Refer to the authorized product information for approved indications and directions.",
+    image: helizyme1,
+  },
+  {
+    id: "helipride300",
+    name: "Helipride-300",
+    description:
+      "HELIPRIDE-300 Tablets is a prescription medicine containing amisulpride 300 mg per film-coated tablet. Amisulpride is an antipsychotic medicine used for authorized psychiatric indications under medical supervision. Dosage and treatment duration must be determined by a qualified medical practitioner. Potential adverse effects include movement-related symptoms, increased prolactin levels and cardiac rhythm complications in susceptible patients. Use only as prescribed.",
+    image: helipride3001,
+  },
+  {
+    id: "helipride200",
+    name: "Helipride-200",
+    description:
+      "HELIPRIDE-200 Tablets is a prescription medicine containing amisulpride 300 mg per film-coated tablet. Amisulpride is an antipsychotic medicine used for authorized psychiatric indications under medical supervision. Dosage and treatment duration must be determined by a qualified medical practitioner. Potential adverse effects include movement-related symptoms, increased prolactin levels and cardiac rhythm complications in susceptible patients. Use only as prescribed.",
+    image: helipride2001,
+  },
+  {
+    id: "gpine10",
+    name: "G-PINE-10",
+    description:
+      "G-PINE-10 Mouth Dissolving Tablets — The front panel identifies this product as an olanzapine mouth dissolving tablet. Olanzapine is an atypical antipsychotic used for specified psychiatric indications under medical supervision. The active ingredient strength requires confirmation because the supplied back-panel composition conflicts with the front panel. Use only as directed by a qualified medical practitioner. Schedule H prescription medicine.",
+    image: gpine1,
+  },
+  {
+    id: "gpamLite",
+    name: "GPAM-LITE",
+    description:
+      "GPAM-LITE Tablets — A prescription combination containing escitalopram equivalent to 10 mg and clonazepam 0.25 mg per tablet. Escitalopram is an SSRI antidepressant, while clonazepam is a benzodiazepine. The combination must be used only under the supervision of a qualified medical practitioner. Follow the prescribed dosage and treatment duration. Avoid alcohol and do not discontinue regular clonazepam treatment abruptly. Schedule H prescription medicine.",
+    image: gpam1,
+  },
+  {
     id: "floramet",
     name: "Flora Met",
     description:
