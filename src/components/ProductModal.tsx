@@ -30,13 +30,13 @@ import betalikPlus3 from "../assets/betalikplus/Betalik_plus_3.png";
 import betalikPlus4 from "../assets/betalikplus/Betalik_plus_4.png";
 import betalikPlus5 from "../assets/betalikplus/Betalik_plus_5.png";
 
-import clarimet5001 from "../assets/clarimet/Clarimat_1.png";
-import clarimet5002 from "../assets/clarimet/Clarimat_2.png";
-import clarimet5003 from "../assets/clarimet/Clarimat_3.png";
-import clarimet5004 from "../assets/clarimet/Clarimat_4.png";
+import clarimet5001 from "../assets/clarimet/clarimat_1.png";
+import clarimet5002 from "../assets/clarimet/clarimat_2.png";
+import clarimet5003 from "../assets/clarimet/clarimat_3.png";
+import clarimet5004 from "../assets/clarimet/clarimat_4.png";
 
 import coseDSR1 from "../assets/cosedsr/CoseDSR1.png";
-import coseDSR2 from "../assets/cosedsr/coseDSR3.png";
+import coseDSR2 from "../assets/cosedsr/CoseDSR3.png";
 import coseDSR3 from "../assets/cosedsr/CoseDSR4.png";
 import coseDSR4 from "../assets/cosedsr/CoseDSR5.png";
 
@@ -77,10 +77,11 @@ import gampanplus2 from "../assets/gampamplus/Gampam Plus_2.png";
 import gampanplus3 from "../assets/gampamplus/Gampam Plus_3.png";
 import gampanplus4 from "../assets/gampamplus/Gampam Plus_4.png";
 
-import gamteklc1 from "../assets/gamtek_lc/Gamtek_lc_1.png";
-import gamteklc2 from "../assets/gamtek_lc/Gamtek_lc_2.png";
-import gamteklc3 from "../assets/gamtek_lc/Gamtek_lc_3.png";
-import gamteklc4 from "../assets/gamtek_lc/Gamtek_lc_4.png";
+import gamteklc1 from "../assets/gamtek_lc/gamtek_lc_1.png";
+import gamteklc2 from "../assets/gamtek_lc/gamtek_lc_2.png";
+import gamteklc3 from "../assets/gamtek_lc/gamtek_lc_3.png";
+import gamteklc4 from "../assets/gamtek_lc/gamtek_lc_4.png";
+import gamteklc5 from "../assets/gamtek_lc/gamtek_lc_5.png";
 
 import gamtekplus1 from "../assets/gamtek_plus/Gamtek_plus_1.png";
 import gamtekplus2 from "../assets/gamtek_plus/Gamtek_plus_2.png";
@@ -280,7 +281,7 @@ const productImages: Record<string, string[]> = {
   gampam25: [gampan251, gampan252, gampan253, gampan254],
   gampam10: [gampan101, gampan102, gampan103, gampan104],
   gampamplus: [gampanplus1, gampanplus2, gampanplus3, gampanplus4],
-  gamteklc: [gamteklc1, gamteklc2, gamteklc3, gamteklc4],
+  gamteklc: [gamteklc1, gamteklc2, gamteklc3, gamteklc4, gamteklc5],
   gametekplus: [gamtekplus1, gamtekplus2, gamtekplus3, gamtekplus4],
   ghbfort: [ghbfort1, ghbfort2, ghbfort3, ghbfort4],
   gpam: [gpam1, gpam2, gpam3, gpam4],
