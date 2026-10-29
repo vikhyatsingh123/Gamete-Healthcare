@@ -30,9 +30,9 @@ import betalikPlus3 from "../assets/betalikplus/Betalik_plus_3.png";
 import betalikPlus4 from "../assets/betalikplus/Betalik_plus_4.png";
 import betalikPlus5 from "../assets/betalikplus/Betalik_plus_5.png";
 
-import clarimet5001 from "../assets/clarimet/clarimat_1.png";
-import clarimet5002 from "../assets/clarimet/clarimat_2.png";
-import clarimet5003 from "../assets/clarimet/clarimat_3.png";
+import clarimet5001 from "../assets/clarimet/Clarimat_1.png";
+import clarimet5002 from "../assets/clarimet/Clarimat_2.png";
+import clarimet5003 from "../assets/clarimet/Clarimat_3.png";
 import clarimet5004 from "../assets/clarimet/clarimat_4.png";
 
 import coseDSR1 from "../assets/cosedsr/CoseDSR1.png";
@@ -130,10 +130,10 @@ import linnt3 from "../assets/linnt/Lin_NT_3.png";
 import linnt4 from "../assets/linnt/Lin_NT_4.png";
 import linnt5 from "../assets/linnt/Lin_NT_5.png";
 
-import lizomet1 from "../assets/lizomet/Lizomet_1.png";
-import lizomet2 from "../assets/lizomet/Lizomet_2.png";
-import lizomet3 from "../assets/lizomet/Lizomet_3.png";
-import lizomet4 from "../assets/lizomet/Lizomet_4.png";
+import lizomet1 from "../assets/lizomet/lizomet_1.png";
+import lizomet2 from "../assets/lizomet/lizomet_2.png";
+import lizomet3 from "../assets/lizomet/lizomet_3.png";
+import lizomet4 from "../assets/lizomet/lizomet_4.png";
 
 import mtek1 from "../assets/mteklc/M_Tec_LC_1.png";
 import mtek2 from "../assets/mteklc/M_Tec_LC_2.png";
