@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import type { Product } from "../App";
 import { CountUpText } from "../components/CountUpText";
 import { ImagePlaceholder } from "../components/ImagePlaceholder";
@@ -18,6 +17,7 @@ import { newLaunched } from "../data/NewLaunched";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import image1 from "../assets/home-img/image1.png";
 import image2 from "../assets/home-img/image2.png";
+import HomeHero from "../components/HomeHero";
 
 export function HomePage() {
   const [open, setOpen] = useState(false);
@@ -44,179 +44,9 @@ export function HomePage() {
     setCurrentPage((prev) => Math.max(prev - 1, 0));
   };
 
-  const heroSignals = [
-    "Human-first healthcare storytelling",
-    "Corporate pharma presentation",
-    "Partner-ready product discovery",
-  ];
-
-  const heroInlineStats = homeStats.slice(0, 2);
-
-  const heroBottomHighlights = [
-    {
-      label: "Trust signal",
-      title: "Clinical credibility with softer brand warmth",
-    },
-    {
-      label: "Digital clarity",
-      title: "A cleaner path from homepage to products and business context",
-    },
-    {
-      label: "Business value",
-      title:
-        "Built to speak to buyers, institutions, and channel partners faster",
-    },
-  ];
-
   return (
     <>
-      <section className="hero-section page-hero-home">
-        <div className="hero-background" aria-hidden="true">
-          <div className="hero-home-backdrop">
-            <img
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1800&q=80"
-              alt=""
-            />
-          </div>
-          <div className="hero-home-overlay"></div>
-          <span className="hero-glow hero-glow-left"></span>
-          <span className="hero-glow hero-glow-right"></span>
-        </div>
-
-        <Reveal className="hero-copy hero-home-copy">
-          <span className="eyebrow">Innovation in healthcare</span>
-          <h1>
-            Pioneering pharmaceutical excellence with a more human visual
-            language.
-          </h1>
-          <p>
-            Gamete Healthcare combines clinical credibility with a modern
-            portfolio story, helping distributors, institutions, and healthcare
-            partners understand the brand fast.
-          </p>
-          <div className="hero-actions">
-            <Link className="button button-primary" to="/products">
-              Explore our products
-            </Link>
-            <Link className="button button-ghost" to="/about">
-              Learn more
-            </Link>
-          </div>
-
-          <div className="hero-signal-list">
-            {heroSignals.map((item) => (
-              <span key={item} className="hero-signal-pill">
-                {item}
-              </span>
-            ))}
-          </div>
-
-          <div className="hero-note">
-            <span className="pulse-dot"></span>
-            More movement, more imagery, and stronger page-to-page storytelling.
-          </div>
-
-          <div className="hero-inline-stats">
-            {heroInlineStats.map((stat) => (
-              <div key={stat.label} className="hero-inline-stat">
-                <CountUpText as="strong" value={stat.value} />
-                <span>{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-
-        <motion.div
-          className="hero-visual hero-home-collage"
-          initial={{ opacity: 0, scale: 0.94, y: 28 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ delay: 0.12, duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <motion.div
-            className="hero-home-figure hero-home-figure-primary"
-            animate={{ y: [0, -8, 0], rotate: [0, -0.6, 0] }}
-            transition={{
-              duration: 7.2,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=80"
-              alt="Healthcare professional consulting with a patient"
-            />
-            <div className="hero-home-figure-caption">
-              <span>Clinical care excellence</span>
-              <strong>
-                Trusted pharmaceutical communication with a stronger human
-                connection
-              </strong>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="hero-home-figure hero-home-figure-secondary"
-            animate={{ y: [0, 10, 0], rotate: [0, 1.2, 0] }}
-            transition={{
-              duration: 8.4,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=80"
-              alt="Medical team collaborating in a modern clinical environment"
-            />
-          </motion.div>
-
-          <motion.div
-            className="hero-home-glass-card hero-home-glass-card-top"
-            animate={{ y: [0, -12, 0], x: [0, 3, 0] }}
-            transition={{
-              duration: 5.2,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-          >
-            <span>Quality score</span>
-            <CountUpText as="strong" value="99.8%" />
-            <p>
-              Clean systems, disciplined communication, and stronger trust cues.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="hero-home-glass-card hero-home-glass-card-bottom"
-            animate={{ y: [0, 14, 0], x: [0, -4, 0] }}
-            transition={{
-              duration: 5.8,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-          >
-            <span>Partner confidence</span>
-            <strong>Responsive support and faster discovery</strong>
-            <p>
-              Built to help visitors understand the company and portfolio
-              without friction.
-            </p>
-          </motion.div>
-        </motion.div>
-
-        <div className="hero-home-bottom-band">
-          {heroBottomHighlights.map((item) => (
-            <Reveal
-              key={item.label}
-              className="hero-home-band-card"
-              delay={0.14}
-              direction="up"
-            >
-              <span>{item.label}</span>
-              <strong>{item.title}</strong>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <HomeHero />
 
       <section className="trust-strip">
         {homeStats.map((stat, index) => (
@@ -265,7 +95,7 @@ export function HomePage() {
         </Reveal>
       </section>
 
-      <section className="products-section">
+      <section className="products-section mb-4">
         <div className="section-heading section-heading-wide">
           <div>
             <span className="eyebrow">Featured products</span>

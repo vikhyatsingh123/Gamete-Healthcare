@@ -236,6 +236,40 @@
   overflow: clip;
 }
 
+/* FOOTER */
+
+.footer-title {
+  position: relative;
+  display: inline-block;
+  color: #142e49;
+  font-size: 15px;
+  font-weight: 750;
+  padding-bottom: 12px;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  border-radius: 5px;
+  background: #159ba8;
+}
+
+/* MOBILE FOOTER */
+
+@media (max-width: 640px) {
+  footer {
+    text-align: left;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+}
+
 .site-header,
 .hero-section,
 .page-hero,
@@ -2327,6 +2361,16 @@
 .product-card-media {
   aspect-ratio: 16 / 10;
   margin: -0.1rem -0.1rem 1rem;
+}
+
+/* HERO BACKGROUND RESPONSIVENESS */
+
+@media (max-width: 767px) {
+  .hero-background-mobile {
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
 }
 
 .product-card::after,

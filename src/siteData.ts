@@ -66,17 +66,6 @@ export const countries = [
   },
 ];
 
-export const socialLinks = [
-  { label: "LinkedIn", short: "in", href: "https://www.linkedin.com/" },
-  { label: "Facebook", short: "fb", href: "https://www.facebook.com/" },
-  { label: "Instagram", short: "ig", href: "https://www.instagram.com/" },
-  { label: "YouTube", short: "yt", href: "https://www.youtube.com/" },
-];
-
-export const footerGroups = {
-  quickLinks: navigation,
-};
-
 export const homeStats = [
   { value: "25+", label: "years Of market presence" },
   { value: "500+", label: "Pharmaceutical product ranges" },
