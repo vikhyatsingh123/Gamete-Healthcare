@@ -7,7 +7,7 @@ export default function PageLoader() {
 
   useEffect(() => {
     const started = Date.now();
-    let hideTimer;
+    let hideTimer: number;
 
     const finishLoading = () => {
       const remaining = Math.max(0, 500 - (Date.now() - started));
