@@ -77,7 +77,7 @@ const Footer = () => {
           lg:grid-cols-[1.35fr_0.8fr_0.9fr_1.25fr]
           gap-10 lg:gap-12
           py-14 sm:py-16
-          border-b border-[#d8e8ef]
+          border-b border-t border-[#d8e8ef]
         "
         >
           {/* BRAND COLUMN */}

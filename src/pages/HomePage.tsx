@@ -306,7 +306,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="split-section split-section-image-right">
+      <section className="split-section split-section-image-right mb-4">
         <Reveal className="split-content">
           <span className="eyebrow">OUR EXPORT DIVISION</span>
           <h2>Your Trusted Partner in Global Healthcare</h2>
